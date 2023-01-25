@@ -4,25 +4,20 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 // import { <RxSlash } from "react-icons/rx";
 import { useState } from "react";
 import growxp from "../Assests/growxp.png";
+import growxp1 from "../Assests/growxp1.png";
 
 export default function Navbar() {
   const [showNavbar, setShowNavbar] = useState(false);
 
   return (
-    <div>
+    <div className="font-serif">
       {/*  Navbar Starts */}
       <nav className={showNavbar ? "bg-slate-50" : "text-[#f2f6f9]"}>
         <div className="grid lg:grid-cols-2 sm:grid-cols-1 pt-12">
-          <a href="/" className="">
-            <h1
-              className={
-                showNavbar
-                  ? "font-bold col-start-1 ml-20 text-[black] transition-all"
-                  : "font-bold col-start-1 ml-20 text-[#f2f6f9] transition-all"
-              }
-            >
-              <img className="w-32 h-12" src={growxp} alt="/"/>
-            </h1>
+          <a href="/">
+          {showNavbar ? <img className="ml-20 w-32 h-12" src={growxp1} alt="/" /> : <img className="ml-20 w-32 h-12" src={growxp} alt="/" /> }
+              
+        
           </a>
 
           <button
@@ -77,8 +72,9 @@ export default function Navbar() {
 
       <div className="container mx-auto text-white text-8xl font-extrabold mt-64">
         <h1 className="ml-4">
-          <span>let's grow ...</span> <br />
-          <span className="ml-56">XPonentially</span>
+          <span>growth:</span> <br />
+          <span className="ml-80">exponential</span>
+    
         </h1>
       </div>
       {/* Part 1 starts */}
@@ -144,9 +140,7 @@ export default function Navbar() {
           </p>
         </div>
         <div className="mt-40">
-          <h3 className="mb-12 text-2xl text-[#c8c0b0]">
-            merchandise
-          </h3>
+          <h3 className="mb-12 text-2xl text-[#c8c0b0]">merchandise</h3>
           <p className="text-xl mb-4">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa culpa
             vitae sunt magnam obcaecati totam ratione sed ipsum tenetur. Ad
@@ -296,20 +290,28 @@ export default function Navbar() {
               </span>
             </a>
           </div>
-        </div>        
+        </div>
       </div>
-      
+
       {/* lets talk ends */}
 
       {/* Footer starts */}
       <div className="container mx-auto text-white grid grid-cols-2 mb-8 mt-16">
-        <h1 className="mt-4 text-lg ml-8"> <span>तेज़</span> Life</h1>
-          <div className="text-lg flex flex-row-reverse">
-            <a href="/" className="ml-2">transparency </a>
-            <a href="/" className="ml-2">privacy </a>
-            <a href="/" className="ml-2">terms </a>
-          </div>
-
+        <h1 className="mt-4 text-lg ml-8">
+          {" "}
+          <span>तेज़</span> Life
+        </h1>
+        <div className="text-lg flex flex-row-reverse">
+          <a href="/" className="ml-2">
+            transparency{" "}
+          </a>
+          <a href="/" className="ml-2">
+            privacy{" "}
+          </a>
+          <a href="/" className="ml-2">
+            terms{" "}
+          </a>
+        </div>
       </div>
       {/* Footer ends */}
     </div>
